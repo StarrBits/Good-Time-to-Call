@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Time to Call - Time Zone Call Optimizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR-PUBLISHER-ID" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🌍 Good Time to Call</h1>
+            <p class="subtitle">Find the Best Time to Call Across Time Zones</p>
+        </div>
+    </header>
+
+    <div class="utc-banner">
+        <div class="utc-note">
+            <strong>24-Hour Clock Display with Coordinated Universal Time (UTC Clock)</strong>
+            <br>
+            <span class="utc-time" id="utcTime">UTC: 00:00:00</span>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Time Zone Selection -->
+        <section class="timezone-selector">
+            <div class="timezone-group">
+                <label for="fromZone">📍 Calling From (Your Time Zone):</label>
+                <select id="fromZone" class="timezone-dropdown">
+                    <optgroup label="US Time Zones">
+                        <option value="America/New_York">Eastern (EDT/EST)</option>
+                        <option value="America/Chicago">Central (CDT/CST)</option>
+                        <option value="America/Denver">Mountain (MDT/MST)</option>
+                        <option value="America/Los_Angeles">Pacific (PDT/PST)</option>
+                        <option value="America/Anchorage">Alaska (AKDT/AKST)</option>
+                        <option value="Pacific/Honolulu">Hawaii (HST)</option>
+                    </optgroup>
+                    <optgroup label="International">
+                        <option value="Europe/London">London (GMT/BST)</option>
+                        <option value="Europe/Paris">Central Europe (CET/CEST)</option>
+                        <option value="Asia/Tokyo">Tokyo (JST)</option>
+                        <option value="Asia/Shanghai">Shanghai (CST)</option>
+                        <option value="Asia/Hong_Kong">Hong Kong (HKT)</option>
+                        <option value="Asia/Dubai">Dubai (GST)</option>
+                        <option value="Asia/Singapore">Singapore (SGT)</option>
+                        <option value="Australia/Sydney">Sydney (AEDT/AEST)</option>
+                        <option value="Asia/Bangkok">Bangkok (ICT)</option>
+                        <option value="Asia/Mumbai">India (IST)</option>
+                        <option value="Europe/Moscow">Moscow (MSK)</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="timezone-group">
+                <label for="toZone">📞 Calling To (Their Time Zone):</label>
+                <select id="toZone" class="timezone-dropdown">
+                    <optgroup label="US Time Zones">
+                        <option value="America/New_York">Eastern (EDT/EST)</option>
+                        <option value="America/Chicago">Central (CDT/CST)</option>
+                        <option value="America/Denver">Mountain (MDT/MST)</option>
+                        <option value="America/Los_Angeles" selected>Pacific (PDT/PST)</option>
+                        <option value="America/Anchorage">Alaska (AKDT/AKST)</option>
+                        <option value="Pacific/Honolulu">Hawaii (HST)</option>
+                    </optgroup>
+                    <optgroup label="International">
+                        <option value="Europe/London">London (GMT/BST)</option>
+                        <option value="Europe/Paris">Central Europe (CET/CEST)</option>
+                        <option value="Asia/Tokyo">Tokyo (JST)</option>
+                        <option value="Asia/Shanghai">Shanghai (CST)</option>
+                        <option value="Asia/Hong_Kong">Hong Kong (HKT)</option>
+                        <option value="Asia/Dubai">Dubai (GST)</option>
+                        <option value="Asia/Singapore">Singapore (SGT)</option>
+                        <option value="Australia/Sydney">Sydney (AEDT/AEST)</option>
+                        <option value="Asia/Bangkok">Bangkok (ICT)</option>
+                        <option value="Asia/Mumbai">India (IST)</option>
+                        <option value="Europe/Moscow">Moscow (MSK)</option>
+                    </optgroup>
+                </select>
+            </div>
+        </section>
+
+        <!-- Main Display -->
+        <section class="time-display">
+            <div class="time-card from-zone">
+                <h2 id="fromZoneLabel">Your Time Zone</h2>
+                <div class="time" id="fromTime">--:--</div>
+                <div class="period" id="fromPeriod">--</div>
+                <div class="activity-status" id="fromActivity">
+                    <span class="status-badge" id="fromActivityBadge">--</span>
+                </div>
+            </div>
+
+            <div class="arrow-divider">⇄</div>
+
+            <div class="time-card to-zone">
+                <h2 id="toZoneLabel">Their Time Zone</h2>
+                <div class="time" id="toTime">--:--</div>
+                <div class="period" id="toPeriod">--</div>
+                <div class="activity-status" id="toActivity">
+                    <span class="status-badge" id="toActivityBadge">--</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activity Guide -->
+        <section class="activity-guide">
+            <h3>📊 Daily Activity Schedule</h3>
+            <div class="activity-legend">
+                <div class="legend-item">
+                    <span class="badge badge-sleep">😴</span>
+                    <span><strong>Asleep:</strong> 22:00 - 07:00</span>
+                </div>
+                <div class="legend-item">
+                    <span class="badge badge-commute">🚗</span>
+                    <span><strong>Commuting:</strong> 07:00 - 09:00, 17:00 - 19:00</span>
+                </div>
+                <div class="legend-item">
+                    <span class="badge badge-work">💼</span>
+                    <span><strong>Work/School:</strong> 09:00 - 12:00, 13:00 - 17:00</span>
+                </div>
+                <div class="legend-item">
+                    <span class="badge badge-lunch">🍽️</span>
+                    <span><strong>Lunch/Eating:</strong> 12:00 - 13:00, 18:00 - 20:00</span>
+                </div>
+                <div class="legend-item">
+                    <span class="badge badge-evening">🎬</span>
+                    <span><strong>Evening/Free Time:</strong> 19:00 - 22:00</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Time Recommendation -->
+        <section class="best-time-recommendation">
+            <h3>✅ Best Time to Call</h3>
+            <div class="recommendation-box" id="recommendationBox">
+                <p id="recommendationText">Select time zones to see recommendations...</p>
+            </div>
+        </section>
+
+        <!-- AdSense Banner -->
+        <div class="adsense-banner">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR-PUBLISHER-ID"
+                 data-ad-slot="YOUR-SLOT-ID"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Time Zone Difference Reference -->
+        <section class="timezone-reference">
+            <h3>⏱️ Time Difference</h3>
+            <div class="difference-box" id="differenceBox">
+                <p id="differenceText">--</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Legal Disclaimers -->
+    <footer class="footer">
+        <div class="disclaimers">
+            <h4>Legal Disclaimer & Information</h4>
+            <ul>
+                <li><strong>Time Zone Information:</strong> This tool uses the IANA Time Zone Database. Time zones and daylight saving time transitions may vary by region.</li>
+                <li><strong>Activity Schedules:</strong> Activity predictions are based on typical work and school schedules in developed countries. Actual schedules vary by individual, region, and industry.</li>
+                <li><strong>No Guarantee:</strong> This tool is for informational purposes only. It does not guarantee that the recipient is available or appropriate to contact at any recommended time.</li>
+                <li><strong>Local Customs:</strong> Always consider local customs, business hours, and cultural norms when calling internationally.</li>
+                <li><strong>Accuracy:</strong> While we strive for accuracy, time zone data may change. Verify current time zone information before important calls.</li>
+                <li><strong>Copyright:</strong> This website and its content are provided "as is" without warranties of any kind.</li>
+                <li><strong>Advertising:</strong> This site contains advertisements from Google AdSense. Google and its partners may use your data for personalized ads. See <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a> for more information.</li>
+            </ul>
+        </div>
+        <p class="footer-text">© 2026 Good Time to Call. All rights reserved. | Last Updated: April 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
