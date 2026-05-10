@@ -1,0 +1,20 @@
+{
+  "name": "good-time-to-call",
+  "version": "1.0.0",
+  "description": "Find out if now is a good time to call",
+  "scripts": {
+    "generate-qr": "node generate-qr.js"
+  },
+  "keywords": [
+    "time-zone",
+    "time-zones",
+    "utc",
+    "call-scheduler",
+    "international"
+  ],
+  "author": "StarrBits",
+  "license": "MIT",
+  "devDependencies": {
+    "qrcode": "^1.5.3"
+  }
+}
